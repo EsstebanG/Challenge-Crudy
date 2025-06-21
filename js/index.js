@@ -79,7 +79,7 @@ function level2() {
     };
 
     const btnIncorrect1 = document.getElementById("buttonLevel0");
-    btnIncorrect1.innerHTML = "Puerta de código.";
+    btnIncorrect1.innerHTML = "While.";
     btnIncorrect1.addEventListener('click', () => {
         showAlert.innerHTML = "Respuesta incorrecta, haz perdido una vida.";
         health -= 1;
@@ -87,7 +87,7 @@ function level2() {
     });
 
     const btnIncorrect2 = document.getElementById("buttonLevel1");
-    btnIncorrect2.innerHTML = "Puerta condicional.";
+    btnIncorrect2.innerHTML = "Do While.";
     btnIncorrect2.addEventListener('click', () => {
         showAlert.innerHTML = "Respuesta incorrecta, haz perdido una vida.";
         health -= 1;
@@ -95,7 +95,7 @@ function level2() {
     });
 
     const btnCorrect = document.getElementById("buttonLevel2");
-    btnCorrect.innerHTML = "Puerta de acceso directo.";
+    btnCorrect.innerHTML = "For.";
     btnCorrect.addEventListener('click', () => {
         showAlert.innerHTML = "Respuesta correcta.";
 
