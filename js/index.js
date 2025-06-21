@@ -184,7 +184,7 @@ function level4() {
             body.removeChild(btnincorrect)
             body.removeChild(btnincorrect2)
             showAlert.textContent = ""
-            level5();
+            finish();
         }, 1000)
     })
 
@@ -206,7 +206,6 @@ function level4() {
     })
 }
 
-//Cuando termine el nivel 5 y seleccione la respuesta correcta haga que llame a este funcion
 function finish() {
     tittleLevel.textContent = "Juego Terminado";
     descriptionLevel.textContent = "Bien hecho, has superado con exito todos los niveles";
