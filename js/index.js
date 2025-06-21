@@ -23,7 +23,7 @@ function login() {
             alert.textContent = "Correcto"
             body.removeChild(left)
             body.removeChild(right)
-            level3()
+            level1()
         } else {
             alert.textContent = "Incorrecto"
         }
@@ -34,7 +34,7 @@ function login() {
             alert.textContent = "Correcto"
             body.removeChild(left)
             body.removeChild(right)
-            level3()
+            level1()
         } else {
             alert.textContent = "Incorrecto"
         }
