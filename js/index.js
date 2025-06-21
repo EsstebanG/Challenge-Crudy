@@ -33,13 +33,13 @@ function level1() {
     right.addEventListener("click", () => {
         if (direction[textDirection] != right.textContent) {
             showAlert.textContent = "Correcto"
-            setTimeout(()=> {
+            setTimeout(() => {
                 body.removeChild(left)
                 body.removeChild(right)
                 showAlert.textContent = ""
                 level2();
             }, 1000)
-            
+
         } else {
             showAlert.textContent = "Incorrecto";
             health -= 1;
@@ -49,9 +49,9 @@ function level1() {
 
     left.addEventListener("click", () => {
         if (direction[textDirection] != left.textContent) {
-            
+
             showAlert.textContent = "Correcto"
-            setTimeout(()=> {
+            setTimeout(() => {
                 body.removeChild(left)
                 body.removeChild(right)
                 showAlert.textContent = ""
@@ -69,7 +69,7 @@ function level1() {
 function level2() {
     showStatistics();
     tittleLevel.textContent = "NIVEL 2: PUERTAS.";
-    descriptionLevel.innerHTML = "Acabas de entrar a un entorno de tres puertas. Debes escoger la correcta para continuar al siguiente nivel.<br> 1. Puerta de código. <br> 2. Puerta condicional. <br> 3. Puerta de acceso directo. <br><br>"; 
+    descriptionLevel.innerHTML = "Acabas de entrar a un entorno de tres puertas. Debes escoger la correcta para continuar al siguiente nivel.<br> 1. Puerta de código. <br> 2. Puerta condicional. <br> 3. Puerta de acceso directo. <br><br>";
 
     // CREATE BUTTOM.
     for (i = 0; i <= 2; i++) {
@@ -98,15 +98,15 @@ function level2() {
     btnCorrect.innerHTML = "Puerta de acceso directo.";
     btnCorrect.addEventListener('click', () => {
         showAlert.innerHTML = "Respuesta correcta.";
-        
+
         showAlert.textContent = "Correcto"
-            setTimeout(()=> {
-                body.removeChild(btnIncorrect1);
-                body.removeChild(btnIncorrect2);
-                body.removeChild(btnCorrect);
-                showAlert.textContent = ""
-                level3();
-            }, 1000)
+        setTimeout(() => {
+            body.removeChild(btnIncorrect1);
+            body.removeChild(btnIncorrect2);
+            body.removeChild(btnCorrect);
+            showAlert.textContent = ""
+            level3();
+        }, 1000)
     });
 
 };
@@ -137,19 +137,19 @@ function level3() {
     let btn3 = document.getElementById("btn3");
     let correct = document.getElementById("btn2");
 
-    correct.textContent = numbers.join(" ");
+    correct.textContent = numbers.join(" | ");
 
 
     correct.addEventListener("click", function () {
         showAlert.textContent = "Correcto";
-        setTimeout(()=> {
-                body.removeChild(btn1);
-                body.removeChild(btn2);
-                body.removeChild(correct);
-                showAlert.textContent = ""
-                level4();   
-            }, 1000)
-        
+        setTimeout(() => {
+            body.removeChild(btn1);
+            body.removeChild(btn2);
+            body.removeChild(btn3);
+            showAlert.textContent = ""
+            level4();
+        }, 1000)
+
     });
 
     btn1.addEventListener("click", () => {
@@ -164,6 +164,48 @@ function level3() {
         showStatistics()
     });
 }
+
+function level4() {
+
+    tittleLevel.innerHTML = "Responde la siguiente pregunta:"
+    descriptionLevel.innerHTML = "Si A < B y si B < C… ¿cuál es la la letra mayor?"
+    for (i = 0; i <= 2; i++) {
+        let btn = document.createElement("button")
+        body.appendChild(btn)
+        btn.setAttribute("id", "btn" + i)
+    }
+
+    const btncorrect = document.getElementById("btn1")
+    btncorrect.innerHTML = "C"
+    btncorrect.addEventListener('click', () => {
+        showAlert.textContent = "Correcto";
+        setTimeout(() => {
+            body.removeChild(btncorrect)
+            body.removeChild(btnincorrect)
+            body.removeChild(btnincorrect2)
+            showAlert.textContent = ""
+            level5();
+        }, 1000)
+    })
+
+    const btnincorrect = document.getElementById("btn0")
+    btnincorrect.innerHTML = "A"
+    btnincorrect.addEventListener('click', () => {
+        showAlert.textContent = "Incorrecto";
+        health -= 1;
+        showStatistics()
+    })
+
+
+    const btnincorrect2 = document.getElementById("btn2")
+    btnincorrect2.innerHTML = "B"
+    btnincorrect2.addEventListener('click', () => {
+        showAlert.textContent = "Incorrecto";
+        health -= 1;
+        showStatistics()
+    })
+}
+
 level1();
 
 
