@@ -68,8 +68,8 @@ function level1() {
 
 function level2() {
     showStatistics();
-    tittleLevel.textContent = "NIVEL 2: PUERTAS.";
-    descriptionLevel.innerHTML = "Acabas de entrar a un entorno de tres puertas. Debes escoger la correcta para continuar al siguiente nivel.<br> 1. Puerta de código. <br> 2. Puerta condicional. <br> 3. Puerta de acceso directo. <br><br>";
+    tittleLevel.textContent = "NIVEL 2: PYTHON.";
+    descriptionLevel.innerHTML = "Acabas de entrar a un entorno de tres opciones. Debes escoger la respuesta correcta para continuar al siguiente nivel.<br> ¿Qué bucle debo utilizar en python para recorrer algo sabiendo la cantidad de iteracciones? <br> 1. While. <br> 2. Do While. <br> 3. For. <br><br>";
 
     // CREATE BUTTOM.
     for (i = 0; i <= 2; i++) {
